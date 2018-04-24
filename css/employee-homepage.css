@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+  font-family: Times New Roman;
+  font-size: 22px;
+}
+
+/* Main Content */
+
+.main-panel {
+  border: 1px solid black;
+  height: 75vh;
+  margin-top: 2%;
+}
+
+  .personal-details-panel {
+    border: 1px solid black;
+    float: left;
+    height: 70%;
+    margin: 5%;
+    width: 40%;
+  }
+
+  .pending-requests-panel {
+    border: 1px solid black;
+    float: left;
+    height: 70%;
+    margin: 5%;
+    overflow: scroll;
+    width: 40%;
+  }
+
+  .pending-request-table-body {
+  }
+
+/* Clearfix */
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.header {
+  border-bottom: 1px solid black;
+  height: 30vh;
+  position: relative;
+  text-align: center;
+}
+
+#logout-button {
+  font-size: 50%;
+  height: 5vh;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  width: 5vw;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Reusable Componenets */
+.revature-button {
+  background-color: #f26925;
+  border-color: #f26925;
+  color: #fff;
+}
