@@ -1,0 +1,12 @@
+
+.request-detail-container {
+  border: 1px solid black;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.revature-button {
+  background-color: #f26925;
+  border-color: #f26925;
+  color: #fff;
+}

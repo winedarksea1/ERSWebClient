@@ -47,6 +47,7 @@ let fetchAllRequests = (url) => {
 
         row.onclick = () => {
           console.log('The Row was clicked!!');
+          location.href = `../html/request-detail-view.html?${request.requestId}`;
         };
 
         tableBody.appendChild(row);
