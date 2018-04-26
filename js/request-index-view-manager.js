@@ -4,7 +4,7 @@ let pendingRequestsButton = document.getElementById('pending-requests-button');
 let approvedRequestsButton = document.getElementById('approved-requests-button');
 
 
-let url = 'https://api.myjson.com/bins/f0kn3';
+let url = 'http://localhost:8080//ers-project/FrontController/request/getAllRequests.ajax';
 
 let fetchAllRequests = (url) => {
   requestsTable = document.getElementById('requests-table');
@@ -19,7 +19,7 @@ let fetchAllRequests = (url) => {
         let row = document.createElement('tr');
 
         let idCell = document.createElement('td');
-        idCell.innerHTML = request.id;
+        idCell.innerHTML = request.requestId;
         row.appendChild(idCell);
 
         let empIdCell = document.createElement('td');
@@ -59,16 +59,20 @@ let fetchAllRequests = (url) => {
 };
 
 pendingRequestsButton.addEventListener('click', () => {
-  // let url = 'some_url';
+  let url = 'http://localhost:8080//ers-project/FrontController/request/getAllPendingRequests.ajax';
+  console.log(tableBody);
   while (tableBody.firstChild) {
+    console.log(tableBody);
     tableBody.removeChild(tableBody.firstChild);
   }
   fetchAllRequests(url);
 });
 
 approvedRequestsButton.addEventListener('click', () => {
-  // let url = 'some_url';
+  let url = 'http://localhost:8080//ers-project/FrontController/request/getAllResolvedRequests.ajax';
+  console.log(tableBody);
   while (tableBody.firstChild) {
+    console.log(tableBody);
     tableBody.removeChild(tableBody.firstChild);
   }
   fetchAllRequests(url);
