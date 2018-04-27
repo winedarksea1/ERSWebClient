@@ -2,9 +2,10 @@
 // Elements selected from the DOM
 let myRevatureButtons = document.getElementsByClassName('revature-button');
 let logoutButton = document.getElementById('logout-button');
-let submitRequestButton = document.getElementById('submit-request');
 let pendingRequestsEmployeeBtn = document.getElementById('pending-requests-employee-btn');
 let pendingRequestsTable = document.getElementById('pending-requests-table');
+
+let submitRequestButton;
 
 let employeeName;
 let employeeEmail;
@@ -82,7 +83,7 @@ let fetchUserRequests = () => {
 
         requestIdCell.innerHTML = request.requestId;
         requestPurposeCell.innerHTML = request.purpose;
-        requestAmountCell.innerHTML = request.requestAmount;
+        requestAmountCell.innerHTML = `$${request.requestAmount}`;
 
         tableRow.appendChild(requestIdCell);
         tableRow.appendChild(requestPurposeCell);
@@ -104,6 +105,13 @@ let initWindow = () => {
   paramString = locationArray[1];
   userId = paramString.slice(3);
   console.log(userId);
+
+  submitRequestButton = document.getElementById('submit-request');
+  submitRequestButton.addEventListener('click', () => {
+    window.location.href = `../html/request-form.html?id=${userId}`;
+    // window.location.href = `../html/request-form.html`;
+
+  });
 
   fetchUserProfile();
   fetchUserRequests();
