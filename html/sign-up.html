@@ -10,33 +10,33 @@
     <div class="container">
       <img src="../img/revature-logic.png" alt="">
       <div class="form-container">
-        <form>
+        <form id="new-user-form" method="POST" action="http://localhost:8080//ers-project/FrontController/user">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" placeholder="Enter First Name">
+            <input name="firstName" type="text" class="form-control" id="firstName" aria-describedby="emailHelp" placeholder="Enter First Name">
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+            <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
           </div>
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
-            <label for="password">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter Username">
+            <label for="userName">Username</label>
+            <input name="userName" type="text" class="form-control" id="username" placeholder="Enter Username">
           </div>
           <div class="form-group">
             <label for="password1">Password</label>
-            <input type="password" class="form-control" id="password1" aria-describedby="emailHelp" placeholder="Enter Password">
+            <input name="password1" type="password" class="form-control" id="password1" aria-describedby="emailHelp" placeholder="Enter Password">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="password2">Re-enter Password</label>
             <input type="password" class="form-control" id="password2" placeholder="Re-enter Password">
-          </div>
+          </div> -->
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
