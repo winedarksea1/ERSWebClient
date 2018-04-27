@@ -7,6 +7,9 @@ let status;
 let purpose;
 let recieptImage;
 
+let formRequestId;
+let formReviewerId;
+
 let locationArray;
 let requestId;
 
@@ -31,6 +34,9 @@ let fetchRequest = url => {
       status.innerHTML = request.status;
       purpose.innerHTML = request.purpose;
       recieptImage.innerHTML = 'Reciept';
+
+      formRequestId.value = request.requestId;
+      formReviewerId.value = request.reviewerId;
     }
   };
 };
@@ -43,6 +49,9 @@ let initWindow = () => {
   status = document.getElementById('status');
   purpose = document.getElementById('purpose');
   recieptImage = document.getElementById('reciept-image');
+
+  formRequestId = document.getElementById('form-request-id');
+  formReviewerId = document.getElementById('form-reviewer-id');
 
   locationArray = window.location.href.split('?');
   requestId = locationArray[1];

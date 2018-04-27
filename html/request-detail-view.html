@@ -14,7 +14,7 @@
       <div class="request-detail-container">
         <h1>Request Information</h1>
         <div class="">
-          <span>Employee Id: </span>
+          <span>Request Id: </span>
           <span id="request-id" class=""></span>
         </div>
 
@@ -52,6 +52,20 @@
 
       <button class="revature-button" type="button" name="button">Approve Request</button>
       <button class="revature-button" type="button" name="button">Deny Request</button>
+
+      <form class="" action="http://localhost:8080//ers-project/FrontController/closeRequest" method="POST">
+        <input id="form-request-id" type="text" name="requestId" value="">
+        <input id="form-reviewer-id" type="text" name="reviewerId" value="">
+        <div class="form-check">
+          <input name="approved" type="checkbox" class="form-check-input" id="approved">
+          <label class="form-check-label" for="exampleCheck1">Approved</label>
+        </div>
+        <div class="form-check">
+          <input name="denied" type="checkbox" class="form-check-input" id="denied">
+          <label class="form-check-label" for="exampleCheck1">Denied</label>
+        </div>
+        <button id="close-request" type="submit" class="btn btn-primary revature-button">Close Request</button>
+      </form>
 
     </div>
 

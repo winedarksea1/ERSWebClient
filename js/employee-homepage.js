@@ -109,8 +109,6 @@ let initWindow = () => {
   submitRequestButton = document.getElementById('submit-request');
   submitRequestButton.addEventListener('click', () => {
     window.location.href = `../html/request-form.html?id=${userId}`;
-    // window.location.href = `../html/request-form.html`;
-
   });
 
   fetchUserProfile();
